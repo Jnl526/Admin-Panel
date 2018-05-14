@@ -1,0 +1,42 @@
+<div class="content">
+<div class="row">
+    <div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+        <h4 class="card-title"> Courses</h4>
+        <a href="/courses/new">
+      <i class="now-ui-icons ui-1_simple-add"></i>
+      <p>Create</p>
+    </a>
+        </div>  <! -- card-header --> 
+        <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th></th>
+              <th>Name</th>
+              <th>hours</th>
+              <th>Cohort ID</th>
+            </thead>
+            <tbody>
+            <% @courses.each do |course|%>   
+                <tr>
+  <td><div class="card-avatar list mx-auto">
+  <img class="avatar_sm list" src="<%= course.avatar %>">
+    </div>
+    </td>
+ <td><%= course.name %></td>
+ <td><%= course.hours %></td>
+  <td><%= course.cohort_id %></td>
+ 
+  <td><%= link_to("View", edit_course_path(course), :class => 'view') %>
+  </td>
+  
+  </tr>
+  <% end %>
+            </tbody>
+            </table>
+    </div>       
+    </div>             
+</div>  <!-- row --> 
+</div>  <!-- content -->  

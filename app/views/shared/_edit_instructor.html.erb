@@ -1,0 +1,73 @@
+<%= form_for @instructor do |f| %>
+    <div class="row">
+        <div class="col-md-4 pr-1">
+            <div class="form-group">
+            <%= f.label :first_name, "First name", class: "label" %>
+            <%= f.text_field :first_name, class: 'form-control', value: @instructor.first_name, autofocus: true %>
+            </div>
+        </div>
+        <div class="col-md-4 px-1">
+            <div class="form-group">
+            <%= f.label :last_name, "Last name", class: "label" %>
+            <%= f.text_field :last_name, class: 'form-control', value: @instructor.last_name, autofocus: true %>
+            </div>
+        </div>
+        <div class="col-md-4 pl-1">
+            <div class="form-group">
+            <%= f.label :email, "Email", class: "label" %>
+            <%= f.email_field :email, class: 'form-control', value: @instructor.email, autofocus: true %>
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col-md-4 pr-1">
+        <div class="form-group">
+        <%= f.label :dob, "Date of Birth", class: "label" %>
+        <%= f.date_field :dob, class: 'form-control', value: @instructor.dob, autofocus: true  %>
+        </div>
+    </div>
+    <div class="col-md-4 pl-1">
+        <div class="form-group">
+        <%= f.label :education, "Education", class: "label" %>
+        <%= f.text_field :education, class: 'form-control', value: @instructor.education, autofocus: true %>
+        </div>
+    </div>
+        <div class="col-md-4 pl-1">
+        <div class="form-group">
+        <%= f.label :salary, "Salary", class: "label" %>
+        <%= f.text_field :salary, class: 'form-control', value: @instructor.salary,autofocus: true %>
+        </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-4 pr-1">
+        <div class="form-group">
+        <%= f.label :password, "Temporary Password", class: "label" %>
+        <%= f.text_field :password, class: 'form-control', autofocus: true %>
+        </div>
+        </div>
+        
+        <div class="col-md-4">
+        <div class="form-group">
+        <%= f.label :avatar, "Your Image", class: "label" %>
+        <%= f.text_field :avatar, cols: 2, rows: 2, class: 'form-control', value: @instructor.avatar, autofocus: true %>
+        </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+        <%= f.label :bio, "Bio", class: "label" %>
+        <%= f.text_area :bio, cols: 2, rows: 2, class: 'form-control', value: @instructor.bio, autofocus: true %>
+        </div>
+      </div>
+        
+    </div>
+    <div class="actions col-md-3 text-center">
+    <%= f.submit "Create", class: "btn btn-primary btn-round btn-lg btn-block mb-3"%>
+    </div>
+    
+    <% end %>

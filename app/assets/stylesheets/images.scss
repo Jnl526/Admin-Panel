@@ -1,0 +1,40 @@
+$avatar_60: url(default_profile_60.png) ;
+$avatar: url(default_profile.png) ;
+
+.size{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 62%;
+}
+.thumb{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-avatar{
+    clip-path: circle(40%);
+    background-color: #39393b;
+    border: 1px solid #cea880;
+    border-radius: 100%;
+}
+
+.avatar {
+    background: $avatar #fff center;
+    border: 0px solid #cea880;
+    border-radius: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(2, 2, 2, 0.29);
+}
+.avatar_sm {
+    background: $avatar_60 center top;
+    border: 1px solid #cea880;
+    border-radius: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(2, 2, 2, 0.29);
+}
+.list{
+    height: 60px;
+    width: 60px;
+}

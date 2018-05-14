@@ -1,0 +1,13 @@
+.size {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 62%;
+}
+
+.thumb {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+}
+/*# sourceMappingURL=images.css.map */

@@ -1,0 +1,44 @@
+<%= render '/shared/sidenav' %>
+
+<div class="main-panel">
+    <%= render '/shared/topnav' %>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                <h4 class="card-title"> Simple Table</h4>
+                </div>  <! -- card-header --> 
+                <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>Avatar</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Date of Birth</th>
+                      <th>Email</th>
+                      <th>Education</th>
+                      <th>Bio</th>
+                      <th>Password</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td><img src="<%= @admin.avatar%>" </>
+                        <td><%= @admin.first_name %></td>
+                        <td><%= @admin.last_name%> </td>
+                        <td><%= @admin.dob%> </td>
+                        <td><%= @admin.email%> </td>
+                        <td><%= @admin.education%> </td>
+                        <td><%= @admin.bio%> </td>
+                        <td><%= @admin.password%> </td>
+                        </tr>
+                    
+                    </tbody>
+                    </table>
+            </div>       
+            </div>             
+        </div>  <!-- row --> 
+    </div>  <!-- content -->  
+</div>   <!-- main -->
+    

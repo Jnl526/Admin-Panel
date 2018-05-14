@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../app/assets/stylesheets/dashboard.scss"
+    ],
+    "names": [],
+    "file": "dashboard.css"
+}

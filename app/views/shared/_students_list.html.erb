@@ -1,0 +1,21 @@
+<h1>students list</h1>
+<div class="table-responsive">
+                  <table class="table">
+                  <tbody>
+                  <% @students.each do |student|%>
+                  <tr>
+
+    <br>
+   <td> <%= student.first_name %></h1>
+   <td>  <%= student.last_name %></td>
+   <td>  <%= student.dob %></td>
+    <td>  <%= student.email %></td>
+    <td>  <%= student.education %></td>
+    <td>  <%= student.bio %></td>
+    <td>  <%= student.password %></td>
+    <td>  <%= student.avatar %></td>
+    
+    </tr>
+    <% end %>
+    </tbody>
+    </table>

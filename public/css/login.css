@@ -1,0 +1,18 @@
+.login {
+  position: relative;
+  background-image: url("university.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.login:after {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,13 @@
+<%= form_for @cohort do |f| %>  
+    <%= f.label :name %>  
+    <%= f.text_field :name , placeholder:"Cohort Name"%>  
+    <%= f.label :start_date %>  
+    <%= f.date_field :start_date %>
+    <%= f.label :end_date %> 
+    <%= f.date_field :end_date %>
+    <%= f.label :instructor_id %> 
+    <%= f.number_field  :instructor_id, placeholder:"Instructor Id"%>
+    <%= f.label :avatar %> 
+    <%= f.text_field :avatar %>  
+    <%= f.submit %>
+<% end %>

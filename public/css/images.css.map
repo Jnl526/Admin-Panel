@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK;EACjB,eAAe,EAAE,GAAG;CACvB;;AACD,AAAA,MAAM,CAAA;EACF,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK;CACpB",
+    "sources": [
+        "../../app/assets/stylesheets/images.scss"
+    ],
+    "names": [],
+    "file": "images.css"
+}

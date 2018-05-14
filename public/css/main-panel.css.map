@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,kBAAkB;EACzB,kBAAkB,EAAE,KAAK,EAAE,qCAAqC;EAChE,UAAU,EAAE,KAAK,EAAE,qCAAqC;CAQ3D;;AAZD,AAKI,WALO,CAKP,QAAQ,CAAC;EACL,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,SAAS;EAClB,UAAU,EAAE,mBAAmB;CAClC",
+    "sources": [
+        "../../app/assets/stylesheets/main-panel.scss"
+    ],
+    "names": [],
+    "file": "main-panel.css"
+}
