@@ -13,6 +13,11 @@ $avatar: url(default_profile.png) ;
     object-fit: cover;
 }
 
+.thumb_sm{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
 .card-avatar{
     clip-path: circle(40%);
     background-color: #39393b;

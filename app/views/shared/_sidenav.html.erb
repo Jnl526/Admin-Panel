@@ -6,13 +6,15 @@
         <a href="#" class="simple-text logo-normal">
           College
         </a>
-        <div class="avatar">
-      <p><%= current_admin.first_name %></p>
-      </div> 
+        
       </div>
       
       <div class="sidebar-wrapper">
+      <div class="avatar-wrapper text-center">
       
+      <%= image_tag (current_admin.avatar), :class => ("avatar thumb_sm") %>
+      <p class="text-white">Hi, <%= current_admin.first_name %></p>
+      </div>
       <ul class="nav">
           <li class="active ">
             <a href="/dashboard">
