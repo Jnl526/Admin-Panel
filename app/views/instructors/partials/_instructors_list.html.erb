@@ -1,0 +1,48 @@
+<div class="content">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+            <div class="card-header row m-0">
+            <h4 class="card-title col-md-8"> Instructors List</h4>
+            <div class="col-md-3 text-right">
+            <a class="btn btn-primary btn-round btn-lg btn-block mb-3" href="/instructors/new">
+          <i class="now-ui-icons ui-1_simple-add pr-2"></i>
+          <span>Create</span>
+        </a>
+        </div>
+            </div>  <! -- card-header --> 
+                <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                    <th>ID</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Education</th>
+                      <th>Salary</th>
+                    </thead>
+                    <tbody>
+                    <% @instructors.each do |instructor|%>   
+                      <tr id="instructor-<%= instructor.id %>">
+                        <td>  <%= instructor.id %> </td>
+                        <td><div class="card-avatar list mx-auto">
+                        <img class="avatar_sm list" src="<%= instructor.avatar %>">
+                          </div>
+                          </td>
+                        <td>  <%= instructor.first_name %>&nbsp;
+                      <%= instructor.last_name %></td>
+                        <td>  <%= instructor.email %> </td>
+                        <td>  <%= instructor.education %> </td>
+                        <td>  <%= instructor.salary %> </td>
+                        <td>  <%= instructor.cohorts.ids %> </td>
+                        <td>  <%= link_to("Show", edit_instructor_path(instructor), :class => 'action view') %></td>
+                        <td><%= link_to "Delete", instructor_path(instructor), class: "delete", remote: true, method: :delete, data: { confirm: "Are you sure?" } %></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                    </table>
+            </div>       
+            </div>             
+        </div>  <!-- row --> 
+    </div>  <!-- content -->  

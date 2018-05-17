@@ -1,0 +1,24 @@
+<%= render '/shared/sidenav' %>
+<div class="main-panel">
+    <%= render '/shared/topnav' %>
+    <p class="pg-title"<a class="navbar-brand" href="#pablo">Course</a></p>
+
+    <div class="content">
+    <div class="row m-0">
+        <div class="col-md-8">
+            <div class="card">
+            <div class="card-header row m-0">
+            <h5 class="card-title col-md-8">Edit Course</h5>
+            <div class="col-md-4 p-4 text-right">
+<span><%= link_to "Back to Courses", courses_path(@courses), class: "now-ui-icons arrows-1_minimal-left"%></span>
+</div>
+        </div>
+                <div class="card-body">
+                <%= render '/courses/partials/edit_course' %>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+                      </div>

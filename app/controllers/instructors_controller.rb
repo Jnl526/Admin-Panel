@@ -1,27 +1,30 @@
 class InstructorsController < ApplicationController
     def index
-        @instructors = Instructor.all
+        @instructors = Instructor.all.order(:id)
     end
 
     def show
         @instructor = Instructor.find(params[:id])
-        @cohort = Cohort.find(@instructor.cohort_id)
     end
 
     def edit
         @instructor = Instructor.find(params[:id])
-        
     end
 
     def update
         @instructor = Instructor.find(params[:id])
         @instructor.update(instructors_params)
-        redirect_to '/instructors'
+        redirect_to edit_instructor_path(@instructor)
     end
 
     def destroy
-        Instructor.find(params[:id]).destroy
-        redirect_to '/instructors'
+        @instructor = Instructor.find(params[:id])
+        @instructor.destroy
+        respond_to { |format|
+    format.html {redirect_to '/instructors'}
+    format.js
+    }
+        
     end
 
     def new 

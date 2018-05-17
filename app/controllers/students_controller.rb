@@ -1,10 +1,11 @@
 class StudentsController < ApplicationController
     def index
-        @students = Student.all
+        @students = Student.all.order(:id)
     end
 
     def show
         @student = Student.find(params[:id])
+        
     end
 
     def edit
@@ -13,13 +14,26 @@ class StudentsController < ApplicationController
 
     def update
         @student = Student.find(params[:id])
+
+        new_cohorts = params[:student][:cohort_ids]
+        new_cohorts.each do |cohort_id|
+            curr = Cohort.find(cohort_id).id
+            
+        end
+
         @student.update(students_params)
-        redirect_to '/students'
+        redirect_to edit_student_path(@student)
     end
 
     def destroy
-        Student.find(params[:id]).destroy
-        redirect_to '/students'
+        @student = Student.find(params[:id])
+        @student.destroy
+        respond_to { |format|
+    format.html {redirect_to '/students'}
+    format.js
+    }
+        
+        
     end
 
     def new 

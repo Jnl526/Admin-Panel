@@ -1,0 +1,27 @@
+<div class="card card-user">
+                
+<div class="card-body">
+    <div class="author">
+         <img class="avatar thumb" src="<%= @admin.avatar %>">
+            <h5><%= @admin.first_name %>&nbsp;<%= @admin.last_name %></h5>
+    </div>
+    <p class="description text-center">Date of Birth</p>
+    <p class="dob text-center"><%= @admin.dob.strftime("%B %d, %Y") %></p>
+    <p class="description text-center">Education</p>
+    <p class="edu text-center"><%= @admin.education %></p>
+    <p class="description text-center">Bio</p>
+    <p class="bio text-center"><%= @admin.bio %></p>
+</div>
+<hr>
+<div class="button-container">
+    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+        <i class="fab fa-facebook"></i>
+    </button>
+    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+        <i class="fab fa-twitter"></i>
+    </button>
+    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+        <i class="fab fa-google-plus"></i>
+    </button>
+</div>
+</div>

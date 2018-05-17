@@ -4,6 +4,13 @@ class AddDeviseToAdmins < ActiveRecord::Migration[5.2]
   def self.up
     change_table :admins do |t|
       ## Database authenticatable
+      t.string :first_name
+      t.string :last_name
+      t.date :dob
+      t.string :education
+      t.text :bio
+      t.string :password
+      t.string :avatar
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 

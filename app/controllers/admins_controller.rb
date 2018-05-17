@@ -1,5 +1,6 @@
 class AdminsController < ApplicationController
-
+    
+       
     def index
        @admins = Admin.all
     end
@@ -15,14 +16,10 @@ class AdminsController < ApplicationController
     def update
         @admin = Admin.find(params[:id])
         @admin.update(admin_params)
-        redirect_to '/admin'
+        redirect_to '/admins'
     end
 
-    def update
-        @admin = Admin.find(params[:id])
-        @admin.update(admin_params)
-        redirect_to '/admin'
-    end
+    
 
     def destroy
         Admin.find(params[:id]).destroy

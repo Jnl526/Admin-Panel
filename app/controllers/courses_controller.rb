@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
     def index
-        @courses = Course.all
+        @courses = Course.all.order(:id)
+        
     end
 
     def show
@@ -18,12 +19,24 @@ class CoursesController < ApplicationController
     
     def edit
         @course = Course.find(params[:id])
+        @cohort = Cohort.find(params[:id])
+        @instructor = Instructor.find(@cohort.instructor_id)
     end
 
     def update
         @course = Course.find(params[:id])
+        #Find the course
+        #Find all associated cohorts and assign them the course id 
+        new_cohorts = params[:course][:cohort_ids]
+        new_cohorts.each do |cohort_id|
+            curr = Cohort.find(cohort_id)
+            curr.update(course_id: @course.id)
+        end
+        # @course.cohorts.each do |cohort|
+        #     cohort.update(course_id: @course.id)
+        # end
         @course.update(courses_params)
-        redirect_to '/courses'
+        redirect_to courses_path(@courses)
     end
 
     def destroy
@@ -32,6 +45,6 @@ class CoursesController < ApplicationController
     end
 
     def courses_params
-        params.require(:courses).permit(:name, :hours, :description, :cohort_id, :avatar)
+        params.require(:course).permit(:name, :hours, :description,:avatar)
     end
 end

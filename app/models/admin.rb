@@ -5,4 +5,8 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
     has_one :role
     has_many :instructors
+
+    def date_form
+      self.date.strftime("%B %d, %Y")
+    end
 end

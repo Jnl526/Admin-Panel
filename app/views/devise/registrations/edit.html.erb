@@ -1,43 +1,110 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render '/shared/sidenav' %>
+<div class="main-panel">
+    <%= render '/shared/topnav' %>
+    <p class="pg-title"<a class="navbar-brand" href="#pablo">Admin</a></p>
+  <div class="content">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title" >Edit <%= resource_name.to_s.humanize %></h4>
+                </div>
+                <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="row">
+          <div class="col-md-4 pr-1">
+            <div class="form-group">
+            <%= f.label :first_name, "First name", class: "label" %>
+            <%= f.text_field :first_name, class: 'form-control', autocomplete: "first_name", autofocus: true %>
+            </div>
+        </div>
+        <div class="col-md-4 px-1">
+            <div class="form-group">
+            <%= f.label :last_name, "Last name", class: "label" %>
+            <%= f.text_field :last_name, class: 'form-control', autocomplete: "last_name", autofocus: true %>
+            </div>
+        </div>
+          <div class="col-md-4 pr-1">
+          <div class="form-group">
+          <%= f.label :email, "Email", class: "label" %>
+            <%= f.email_field :email, class: 'form-control', autofocus: true, autocomplete: "email" %>
+          </div>
+          </div>
+          </div> <!-- row1 -->
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          <div class="row">
+          <div class="col-md-4 pr-1">
+              <div class="form-group">
+              <%= f.label :dob, "Date of Birth", class: "label" %>
+              <%= f.date_field :dob, class: 'form-control', value: @admin.dob, autofocus: true  %>
+              </div>
+          </div>
+          <div class="col-md-4 pl-1">
+              <div class="form-group">
+              <%= f.label :education, "Education", class: "label" %>
+              <%= f.text_field :education, class: 'form-control', value: @admin.education, autofocus: true %>
+              </div>
+          </div>
+          </div><!-- row2 -->
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+        <%= f.label :bio, "Bio", class: "label" %>
+        <%= f.text_area :bio, cols: 2, rows: 2, class: 'form-control', value: @admin.bio, autofocus: true %>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+        <%= f.label :avatar, "Your Image", class: "label" %>
+        <%= f.text_field :avatar, cols: 2, rows: 2, class: 'form-control', value: @admin.avatar, autofocus: true %>
+        </div>
+        </div>
+    </div><!-- row3 -->
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+            <%= f.label :password, "Change Password", class: "label" %> 
+            <%= f.password_field :password, class: 'form-control',autocomplete: "off"%>
+            <% if @minimum_password_length %>
+              <br />
+              <em><%= @minimum_password_length %> characters minimum</em>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-group">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "off" %>
+          </div>
+          </div>
+          <div class="col-md-4">
+        <div class="form-group">
+            <%= f.label :current_password %> 
+            <%= f.password_field :current_password, class: 'form-control', autocomplete: "off" %>
+          </div>
+          </div>
+          <div class="actions col-md-3 text-center">
+            <%= f.submit "Update", class: "btn btn-primary btn-round btn-lg btn-block mb-3"%>
+          </div>
+        <% end %>
+    </div> <!-- row3 -->
+        <h4 class="card-title" >Cancel my account</h4>
+        <div class="actions col-md-3 text-center">
+        <p>Unhappy? <%= button_to "Delete", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary btn-round btn-lg btn-block mb-3"%></p>
+    </div>
+        <%= link_to "Back", :back %>
+</div>
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div><!-- col-md-8 -->
+<div class="col-md-4">
+        <%= render 'admins/partials/admin_profile' %>
+        </div>
+</div> <!-- row -->
+</div>  <!-- content -->
+</div>   <!-- main-panel -->

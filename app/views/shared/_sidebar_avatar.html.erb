@@ -1,0 +1,5 @@
+<div class="avatar-wrapper text-center p-4 pl-4">
+      <%= image_tag (current_admin.avatar), :class => ("thumb_sm") %>
+      <p class="text-white">Hi, <%= current_admin.first_name %></p>
+      <%= link_to("Edit Profile", edit_admin_registration_path(current_admin), :class => 'action view text-white') %>
+      </div>

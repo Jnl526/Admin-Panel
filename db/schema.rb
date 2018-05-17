@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2018_05_11_201034) do
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
     t.date "dob"
@@ -23,8 +25,6 @@ ActiveRecord::Schema.define(version: 2018_05_11_201034) do
     t.text "bio"
     t.string "password"
     t.string "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2018_05_11_201034) do
     t.date "start_date"
     t.date "end_date"
     t.integer "instructor_id"
+    t.integer "course_id"
     t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -53,7 +54,6 @@ ActiveRecord::Schema.define(version: 2018_05_11_201034) do
     t.string "name"
     t.integer "hours"
     t.text "description"
-    t.integer "cohort_id"
     t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -77,11 +77,6 @@ ActiveRecord::Schema.define(version: 2018_05_11_201034) do
     t.string "role"
   end
 
-  create_table "student_courses", force: :cascade do |t|
-    t.integer "course_id"
-    t.integer "student_id"
-  end
-
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -91,6 +86,7 @@ ActiveRecord::Schema.define(version: 2018_05_11_201034) do
     t.text "bio"
     t.string "password"
     t.string "avatar"
+    t.integer "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

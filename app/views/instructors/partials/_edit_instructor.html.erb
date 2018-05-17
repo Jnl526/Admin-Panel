@@ -64,10 +64,13 @@
         <%= f.text_area :bio, cols: 2, rows: 2, class: 'form-control', value: @instructor.bio, autofocus: true %>
         </div>
       </div>
-        
+      
     </div>
     <div class="actions col-md-3 text-center">
-    <%= f.submit "Create", class: "btn btn-primary btn-round btn-lg btn-block mb-3"%>
+    <%= f.submit "Update", class: "btn btn-primary btn-round btn-lg btn-block mb-3"%>
     </div>
     
     <% end %>
+    <div class="row delete float-right m-0">
+        <%= link_to "Delete", instructor_path(@instructor), class: " btn btn-primary btn-round btn-lg btn-block mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>

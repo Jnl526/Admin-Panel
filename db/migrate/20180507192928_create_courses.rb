@@ -4,9 +4,7 @@ class CreateCourses < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :hours
       t.text :description
-      t.integer :cohort_id
       t.string :avatar
-
       t.timestamps
     end
   end

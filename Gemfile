@@ -68,3 +68,5 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 gem 'devise'
+
+gem 'fontawesome-rails', '~> 4.0', '>= 4.0.3.2'

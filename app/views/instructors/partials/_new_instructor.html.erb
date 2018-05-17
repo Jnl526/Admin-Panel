@@ -1,0 +1,85 @@
+<div class="content">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                <h4 class="card-title"> Create An Instructor</h4>
+                </div>  <! -- card-header --> 
+                <div class="card-body">
+                <%= form_for @instructor do |f| %>
+                    <div class="row">
+                        <div class="col-md-4 pr-1">
+                            <div class="form-group">
+                            <%= f.label :first_name, "First name", class: "label" %>
+                            <%= f.text_field :first_name, class: 'form-control', autofocus: true %>
+                            </div>
+                        </div>
+                        <div class="col-md-4 px-1">
+                            <div class="form-group">
+                            <%= f.label :last_name, "Last name", class: "label" %>
+                            <%= f.text_field :last_name, class: 'form-control', autofocus: true %>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pl-1">
+                            <div class="form-group">
+                            <%= f.label :email, "Email", class: "label" %>
+                            <%= f.email_field :email, class: 'form-control', autofocus: true %>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                        <%= f.label :dob, "Date of Birth", class: "label" %>
+                        <%= f.date_field :dob, class: 'form-control', autofocus: true  %>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                        <%= f.label :education, "Education", class: "label" %>
+                        <%= f.text_field :education, class: 'form-control', autofocus: true %>
+                        </div>
+                    </div>
+                        <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                        <%= f.label :salary, "Salary", class: "label" %>
+                        <%= f.text_field :salary, class: 'form-control', autofocus: true %>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                        <%= f.label :password, "Temporary Password", class: "label" %>
+                        <%= f.text_field :password, class: 'form-control', autofocus: true %>
+                        </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                        <div class="form-group">
+                        <%= f.label :avatar, "Your Image", class: "label" %>
+                        <%= f.text_field :avatar, cols: 2, rows: 2, class: 'form-control', autofocus: true %>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                        <%= f.label :bio, "Bio", class: "label" %>
+                        <%= f.text_area :bio, cols: 2, rows: 2, class: 'form-control', autofocus: true %>
+                        </div>
+                      </div>
+                        
+                    </div>
+                    <div class="actions col-md-3 text-center">
+                    <%= f.submit "Create", class: "btn btn-primary btn-round btn-lg btn-block mb-3"%>
+                    </div>
+                    
+                    <% end %>
+            </div>      
+            </div>             
+        </div>  <!-- row --> 
+    </div>  <!-- content -->  

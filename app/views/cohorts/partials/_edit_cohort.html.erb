@@ -1,0 +1,48 @@
+<%= form_for @cohort do |f| %>
+    <div class="row">
+        <div class="col-md-4 pr-1">
+            <div class="form-group">
+            <%= f.label :name, "Name", class: "label" %>
+            <%= f.text_field :name, class: 'form-control', autocomplete: "name", autofocus: true %>
+            </div>
+        </div>
+        <div class="col-md-4 px-1">
+            <div class="form-group">
+            <%= f.label :start_date, "Start date", class: "label" %>
+            <%= f.date_field :start_date, class: 'form-control', autocomplete: "start_date", autofocus: true %>
+            </div>
+        </div>
+        <div class="col-md-4 px-1">
+            <div class="form-group">
+            <%= f.label :end_date, "End date", class: "label" %>
+            <%= f.date_field :end_date, class: 'form-control', autocomplete: "end_date", autofocus: true %>
+            </div>
+        </div>
+    </div>  <!-- row1 -->
+    
+    <div class="row m-0">
+    
+        <div class="col-md-4 pr-1">
+            <div class="form-group">
+            <%= f.label :instructor_id, "Instructor", class: "label" %>
+            <%= f.number_field  :instructor_id, class: 'form-control', autocomplete: "instructor_id", autofocus: true  %>
+            </div>
+            </div>
+            <div class="col-md-4 pr-1">
+            <div class="form-group">
+            <%= f.label :course_id, "Course", class: "label" %>
+            <%= f.number_field  :course_id, class: 'form-control', autocomplete: "course_id", autofocus: true  %>
+            </div>
+       
+        </div>
+        
+    </div>  <!-- row2 -->
+
+        
+    <div class="actions col-md-3 text-center">
+    <%= f.submit "Update", class: "btn btn-primary btn-round btn-lg btn-block mb-3"%>
+    </div>
+    <% end %>
+    <div class="row delete float-right m-0">
+    <%= link_to "Delete", cohort_path(@cohort), class: "btn btn-primary btn-round btn-lg btn-block mb-3", method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>

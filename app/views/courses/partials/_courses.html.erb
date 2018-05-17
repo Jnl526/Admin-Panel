@@ -1,0 +1,46 @@
+<div class="content">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+            <div class="card-header row m-0">
+            <h4 class="card-title col-md-8">Courses</h4>
+            <div class="col-md-3 text-right">
+            <a class="btn btn-primary btn-round btn-lg btn-block mb-3" href="/courses/new">
+          <i class="now-ui-icons ui-1_simple-add pr-2"></i>
+          <span>Create</span>
+        </a>
+        </div>
+            </div>  <! -- card-header --> 
+        <div class="card-body">
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead class=" text-primary">
+              <th>Course ID</th>
+              <th></th>
+              <th>Name</th>
+              <th>Hours</th>
+              <th>Cohort ID</th>
+            </thead>
+            <tbody>
+            <% @courses.each do |course|%>   
+                <tr id="course-<%= course.id %>">
+                <td><%= course.id %></td>
+                <td><div class="card-avatar list mx-auto">
+                <img class="avatar_sm list" src="<%= course.avatar %>">
+                  </div>
+                </td>
+                <td><%= course.name %></td>
+                <td><%= course.hours %></td>
+                <td><%= course.cohorts.ids %></td>
+ 
+  <td><%= link_to("View", edit_course_path(course), :class => 'view') %>
+  </td>
+  <td><%= link_to "Delete", course_path(course), class: "delete", remote: true,  method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+  <% end %>
+            </tbody>
+            </table>
+    </div>       
+    </div>             
+</div>  <!-- row --> 
+</div>  <!-- content -->  

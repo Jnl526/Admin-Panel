@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admins, :controllers => { registrations: 'registrations' }
   root "dashboard#index"
-  # resources :admins
+  resources :admins
   resources :students
   resources :instructors
   resources :cohorts

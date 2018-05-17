@@ -9,6 +9,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.text :bio
       t.string :password
       t.string :avatar
+      t.integer :cohort_id
       
       t.timestamps
     end

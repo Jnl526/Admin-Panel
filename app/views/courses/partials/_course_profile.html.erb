@@ -1,0 +1,31 @@
+<div class="card card-user">
+                
+                <div class="card-body">
+                    <div class="author">
+                         <img class="avatar thumb" src="<%= @cohort.avatar %>">
+                            <h5><%= @course.name %></h5>
+                            <p class="description">
+                            <div class="table-responsive">
+                                <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Course Id</th>
+                                  <th>Name</th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td><%= @course.cohorts.ids.each do |cohort| %>
+                                    <%= cohort.name %>
+                                    <% end %></td>
+                                <td></td>
+                                
+                            </tr>
+                            </tbody>
+                            </table>
+
+                            
+                       </p>
+                    </div>
+                    
+            </div>
+            
+            

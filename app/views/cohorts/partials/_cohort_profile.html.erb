@@ -1,0 +1,43 @@
+<div class="card card-user">
+                
+                <div class="card-body">
+                    <div class="author">
+                         <img class="avatar thumb" src="<%= @cohort.avatar %>">
+                            <h5><%= @cohort.name %></h5>
+                            <p class="description">
+                            <div class="table-responsive">
+                                <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Course Id</th>
+                                  <th>Name</th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td><%= @cohort.course.id %></td>
+                                <td><%= @cohort.course.name %></td>
+                                
+                            </tr>
+                            </tbody>
+                            </table>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Instructor Id</th>
+                                  <th>Name</th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td><%= @cohort.instructor.id %></td>
+                                <td><%= @cohort.instructor.first_name %>&nbsp;<%= @cohort.instructor.last_name %></td>
+                                
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                       </p>
+                    </div>
+                    
+            </div>
+            
+            

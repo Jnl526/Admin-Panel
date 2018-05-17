@@ -1,0 +1,45 @@
+            <div class="card card-user">
+                
+                <div class="card-body">
+                    <div class="author">
+                         <img class="avatar thumb" src="<%= @instructor.avatar %>">
+                            <h5><%= @instructor.first_name %>&nbsp;<%= @instructor.last_name %></h5>
+                            <p class="description">
+                            <div class="table-responsive">
+                                <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Course Id</th>
+                                  <th>Name</th>
+                                  <th>Cohort</th>
+                                </thead>
+                                <tbody>
+                            <% @instructor.cohorts.each do |cohort| %>
+                                <tr>
+                                <td><%= cohort.course.id %></td>
+                                <td><%= link_to("#{cohort.course.name}", edit_course_path(cohort.course, cohort)) %></td>
+                                <td><%= cohort.name %></td>
+                                
+                            <% end %>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                       </p>
+                    </div>
+                    <p class="description text-center">Bio</p>
+                    <p class="bio text-center"><%= @instructor.bio %></p>
+                </div>
+                <hr>
+                <div class="button-container">
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-google-plus"></i>
+                    </button>
+                </div>
+            </div>
+        
