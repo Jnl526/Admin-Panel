@@ -1,5 +1,5 @@
-$avatar_60: image-url(default_profile_60.png) ;
-$avatar: image-url(default_profile.png) ;
+$avatar_60: url(default_profile_60.png) ;
+$avatar: url(default_profile.png) ;
 
 .size{
     width: 300px;
@@ -26,14 +26,16 @@ $avatar: image-url(default_profile.png) ;
 }
 
 .avatar {
-    background: $avatar #fff center;
+    background-image: image-url('default_profile.png');
+    background: #fff center;
     border: 0px solid #cea880;
     border-radius: 100%;
     max-width: 100%;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(2, 2, 2, 0.29);
 }
 .avatar_sm {
-    background: $avatar_60 center top;
+    background-image: image-url('default_profile_60.png');
+    background: center top;
     border: 1px solid #cea880;
     border-radius: 100%;
     max-width: 100%;
