@@ -27,7 +27,8 @@ $avatar: url(default_profile.png) ;
 
 .avatar {
     background-image: image-url('default_profile.png');
-    background: #fff center;
+    background-color: #fff;
+    background-position: center top;
     border: 0px solid #cea880;
     border-radius: 100%;
     max-width: 100%;
@@ -35,7 +36,7 @@ $avatar: url(default_profile.png) ;
 }
 .avatar_sm {
     background-image: image-url('default_profile_60.png');
-    background: center top;
+    background-position: center top;
     border: 1px solid #cea880;
     border-radius: 100%;
     max-width: 100%;
