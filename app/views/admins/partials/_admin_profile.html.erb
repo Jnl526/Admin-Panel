@@ -2,7 +2,8 @@
                 
 <div class="card-body">
     <div class="author">
-         <img class="avatar thumb" src="<%= @admin.avatar %>">
+    <%= image_tag (current_admin.avatar), :class => ("avatar thumb") %>
+         
             <h5><%= @admin.first_name %>&nbsp;<%= @admin.last_name %></h5>
     </div>
     <p class="description text-center">Date of Birth</p>
