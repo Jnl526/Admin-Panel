@@ -28,7 +28,8 @@ $avatar: url(default_profile.png) ;
 .avatar {
     background-image: image-url('default_profile.png');
     background-color: #fff;
-    background-position: center top;
+    background-position: center;
+    background-size: contain;
     border: 0px solid #cea880;
     border-radius: 100%;
     max-width: 100%;
@@ -36,13 +37,39 @@ $avatar: url(default_profile.png) ;
 }
 .avatar_sm {
     background-image: image-url('default_profile_60.png');
-    background-position: center top;
+    background-position: center;
+    background-size: contain;
     border: 1px solid #cea880;
     border-radius: 100%;
     max-width: 100%;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(2, 2, 2, 0.29);
 }
+
+.default{
+    
+        background-image: image-url('default_image.png');
+        background-color: #fff;
+        background-position: center top;
+        background-size: contain;
+        border: 0px solid #cea880;
+        border-radius: 100%;
+        max-width: 100%;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(2, 2, 2, 0.29);
+    
+}
+.default_sm{
+    
+    background-image: image-url('default_image_60.png');
+    background-color: #fff;
+    background-position: center top;
+    background-size: contain;
+    border: 0px solid #cea880;
+    border-radius: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(2, 2, 2, 0.29);
+
+}
 .list{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
 }

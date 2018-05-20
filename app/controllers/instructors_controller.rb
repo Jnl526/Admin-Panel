@@ -13,7 +13,12 @@ class InstructorsController < ApplicationController
 
     def update
         @instructor = Instructor.find(params[:id])
+        
+            curr = Cohort.find(cohort_id)
+            
+        
         @instructor.update(instructors_params)
+        
         redirect_to edit_instructor_path(@instructor)
     end
 
@@ -37,6 +42,6 @@ class InstructorsController < ApplicationController
     end
 
     def instructors_params
-        params.require(:instructor).permit(:first_name, :last_name, :dob, :email, :education, :bio, :salary, :password, :avatar )
+        params.require(:instructor).permit(:first_name, :last_name, :dob, :email, :education, :bio, :salary, :password, :avatar, :cohort_id )
     end
 end

@@ -12,10 +12,38 @@
    .card-user {
         margin-top: 4.34em;
     }   
-}
+    .main-sidebar{
+        position: fixed;
+        z-index: 1030;
+        .view{
+            color: #000;
+            font-size: 18px;
 
-@media screen and (max-width: 991px) {
-.pg-title {
-    top: 56px;
+            &:hover{
+                color: #f96332;
+            }
+        }
+    }
 }
+@media screen and (min-width: 992px) {
+.nav {
+    display: block;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+}
+@media screen and (max-width: 991px) {
+    .pg-title {
+        top: 56px;
+    }
+    .main-panel{
+        .col-md-3,
+        .col-md-4,
+        .col-md-8 {
+            flex: 100%; 
+        max-width: 100%; 
+        }
+    }
 }

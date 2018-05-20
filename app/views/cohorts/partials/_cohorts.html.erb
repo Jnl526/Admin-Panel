@@ -20,19 +20,20 @@
               <th>Name</th>
               <th>Start Date</th>
               <th>End Date</th>
+              <th>Instructor</th>
             </thead>
             <tbody>
             <% @cohorts.each do |cohort|%>   
                 <tr id="cohort-<%= cohort.id %>">
       <td><%= cohort.id %></td>
   <td><div class="card-avatar list mx-auto">
-  <img class="avatar_sm list" src="<%= cohort.avatar %>">
+  <%= image_tag (cohort.avatar), :class => ("default_sm list") %>
     </div>
     </td>
  <td><%= cohort.name %></td>
  <td><%= cohort.start_date %></td>
   <td><%= cohort.end_date %></td>
- 
+  <td><%= cohort.instructor.first_name %> <%= cohort.instructor.last_name %></td>
   <td><%= link_to("View", edit_cohort_path(cohort), :class => 'view') %>
   </td>
   <td><%= link_to "Delete", cohort_path(cohort), class: "delete", remote: true,method: :delete, data: { confirm: "Are you sure?" } %></td>

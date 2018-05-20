@@ -6,6 +6,7 @@ class CohortsController < ApplicationController
 
     def show
         @cohort = Cohort.find(params[:id])
+
     end
 
     def new
@@ -18,8 +19,8 @@ class CohortsController < ApplicationController
     end
     
     def edit
-        @cohort = Cohort.find(params[:id])
-        
+    @cohort = Cohort.find(params[:id])
+
     end
 
     def update

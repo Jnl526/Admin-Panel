@@ -2,7 +2,8 @@
                 
                 <div class="card-body">
                     <div class="author">
-                         <img class="avatar thumb" src="<%= @cohort.avatar %>">
+                    <%= image_tag (@cohort.avatar), :class => ("default thumb") %>
+                         
                             <h5><%= @cohort.name %></h5>
                             <p class="description">
                             <div class="table-responsive">
