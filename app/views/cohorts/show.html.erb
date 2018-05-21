@@ -1,5 +1,26 @@
-<%= @cohort.name %>
+<%= render '/shared/sidenav' %>
+<div class="main-panel">
+    <%= render '/shared/topnav' %>
+    <p class="pg-title"<a class="navbar-brand" href="#pablo">Instructors</a></p>
 
-
-<p>  <%= @cohort.start_date.strftime %></p>
-<p> <%= @instructor.first_name %> </p>
+<div class="content">
+    <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header row m-0">
+            <h5 class="card-title col-md-8">Cohorts</h5>
+           </div><!-- card-header -->
+                <div class="card-body">
+                <%= render '/cohorts/partials/cohort_profile' %>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <%= link_to("Edit", edit_cohort_path(@cohort), :class => 'fa fa-edit action view btn btn-primary btn-round btn-lg btn-block mb-3') %>
+            </div>
+            </div>
+        </div><!-- col-md-8 -->
+        <div class="col-md-4">
+        <%= render '/cohorts/partials/cohort_students' %>
+        </div>
+    </div><!-- row -->
+</div><!-- content -->

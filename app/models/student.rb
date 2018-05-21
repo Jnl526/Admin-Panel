@@ -2,6 +2,10 @@ class Student < ApplicationRecord
     has_one :role
     has_many :cohorts
 
+    def name
+        "#{first_name} #{last_name}"
+    end
+    
     validate :age
     
     def age

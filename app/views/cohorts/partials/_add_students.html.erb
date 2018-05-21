@@ -1,0 +1,8 @@
+<%= form_tag @add_students do|f| %>
+      <% @add_students.each do |student| %>
+        <p><label>
+        <%= f.collection_select 'student_id[]', student.id %>
+        <span><%= student.name %></span></label></p>
+      <% end %>
+          <button class="btn " type="submit">Submit</button>
+    <% end %>

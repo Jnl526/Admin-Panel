@@ -34,7 +34,7 @@
  <td><%= cohort.start_date %></td>
   <td><%= cohort.end_date %></td>
   <td><%= cohort.instructor.first_name %> <%= cohort.instructor.last_name %></td>
-  <td><%= link_to("View", edit_cohort_path(cohort), :class => 'view') %>
+  <td><%= link_to("View", cohort_path(cohort), :class => 'view') %>
   </td>
   <td><%= link_to "Delete", cohort_path(cohort), class: "delete", remote: true,method: :delete, data: { confirm: "Are you sure?" } %></td>
   </tr>

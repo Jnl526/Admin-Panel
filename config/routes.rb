@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get "/logout", to: "logout#index"
   get "/signup", to: "signup#index"
   get "/dashboard", to: "dashboard#index"
-  
+  post '/cohorts/:id/addstudents', to: 'cohorts#addstudents'
+  post '/cohorts/:id/removestudent', to: 'cohorts#removestudent'
 end

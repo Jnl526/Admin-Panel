@@ -1,0 +1,38 @@
+<div class="content">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+            <div class="card-header row m-0">
+            <h5 class="card-title "> Students </h5>
+            
+            </div>  <! -- card-header --> 
+                <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                    <tbody>
+                    <% @students.each do |student|%>
+        <td><div class="card-avatar list mx-auto">
+          <img class="avatar_sm list" src="<%= student.avatar %>">
+            </div>
+            </td>
+        <td><a href="/students/<%=student.id %>"> <%= student.name %></a> </td>
+          </tr>
+          <% end %>
+                    </tbody>
+                    </table>
+            </div>       
+            </div>             
+        </div>  <!-- row --> 
+    </div>  <!-- content -->  
+
+
+
+
+
+
+
+
+
+
+

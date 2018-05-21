@@ -1,5 +1,4 @@
-<div class="card card-user">
-                
+<div class="card card-user">             
                 <div class="card-body">
                     <div class="author">
                     <%= image_tag (@cohort.avatar), :class => ("default thumb") %>
@@ -9,29 +8,13 @@
                             <div class="table-responsive">
                                 <table class="table">
                                 <thead class=" text-primary">
-                                  <th>Course Id</th>
-                                  <th>Name</th>
+                                  <th>Course Name</th>
+                                  <th>Instructor Name</th>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                <td><%= @cohort.course.id %></td>
                                 <td><%= @cohort.course.name %></td>
-                                
-                            </tr>
-                            </tbody>
-                            </table>
-
-                            <div class="table-responsive">
-                                <table class="table">
-                                <thead class=" text-primary">
-                                  <th>Instructor Id</th>
-                                  <th>Name</th>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                <td><%= @cohort.instructor.id %></td>
-                                <td><%= @cohort.instructor.first_name %>&nbsp;<%= @cohort.instructor.last_name %></td>
-                                
+                                <td><%= @cohort.instructor.name %></td>
                             </tr>
                             </tbody>
                             </table>
