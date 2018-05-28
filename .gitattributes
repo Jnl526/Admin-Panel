@@ -1,3 +1,3 @@
 static/* linguist-vendored
-$ cat .gitattributes
-*.rb linguist-language=Ruby
+special-vendored-path/* linguist-vendored
+jquery.js linguist-vendored=false
