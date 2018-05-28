@@ -1,1 +1,3 @@
 static/* linguist-vendored
+$ cat .gitattributes
+*.rb linguist-language=Ruby
