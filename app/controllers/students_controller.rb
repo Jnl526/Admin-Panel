@@ -15,12 +15,6 @@ class StudentsController < ApplicationController
     def update
         @student = Student.find(params[:id])
 
-        new_cohorts = params[:student][:cohort_ids]
-        new_cohorts.each do |cohort_id|
-            curr = Cohort.find(cohort_id).id
-            
-        end
-
         @student.update(students_params)
         redirect_to edit_student_path(@student)
     end

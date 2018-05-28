@@ -14,11 +14,13 @@
         
           <%= f.label :email %><br />
           <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email"  %>
+          <p class="demo">demo: admin@domain.com</p>
         </div>
 
         <div class="input-group no-border form-control-lg">
           <%= f.label :password %><br />
           <%= f.password_field :password,class: "form-control", autocomplete: "off" %>
+          <p class="demo">demo: test123</p>
         </div>
 
         <% if devise_mapping.rememberable? -%>
